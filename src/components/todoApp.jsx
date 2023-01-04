@@ -1,4 +1,5 @@
 import { useState } from "react";
+import Todo from "./todo";
 
 export default function TodoApp() {
   const [title, setTitle] = useState("Hola");
@@ -44,7 +45,7 @@ export default function TodoApp() {
 
       <div className="todosContainer">
         {todos.map((item) => (
-          <div key={item.id}>{item.title}</div>
+          <Todo key={item.id} item={item} />
         ))}
       </div>
     </div>
