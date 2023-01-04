@@ -1,13 +1,35 @@
 import { useState } from "react";
 
-export default function Todo({ item }) {
+export default function Todo({ item, onUpdate }) {
   const [isEdit, setIsEdit] = useState(false);
 
   const FormEdit = () => {
+    const [newValue, setNewValue] = useState(item.title);
+    const handleSubmit = (e) => {
+      e.preventDefault();
+    };
+
+    const handleChange = (e) => {
+      const value = e.target.value;
+      setNewValue(value);
+    };
+
+    const handleClickUpdateTodo = () => {
+      onUpdate(item.id, newValue);
+      setIsEdit(false);
+    };
+
     return (
-      <form>
-        <input type="text" />
-        <button>Update</button>
+      <form className="todoUpdateForm" onSubmit={handleSubmit}>
+        <input
+          type="text"
+          className="todoInpu"
+          onChange={handleChange}
+          value={newValue}
+        />
+        <button className="button" onClick={handleClickUpdateTodo}>
+          Update
+        </button>
       </form>
     );
   };
