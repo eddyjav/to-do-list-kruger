@@ -1,0 +1,59 @@
+body {
+  padding: 50px;
+}
+
+.btn-warning {
+  background-color: #fd7e14;
+  color: azure;
+}
+
+.btn-warning:hover {
+  background-color: #fd7d14d2;
+}
+button {
+  margin-right: 10px;
+}
+
+p {
+  cursor: pointer;
+  margin: 0px;
+}
+
+form {
+  width: 100%;
+}
+
+.p-cant {
+  display: flex;
+  justify-content: space-between;
+}
+
+.list-group-item {
+  align-items: center;
+  display: flex;
+  justify-content: space-between;
+}
+
+.complete {
+  text-decoration: line-through;
+}
+
+.swal-overlay {
+  background-color: rgba(198, 118, 33, 0.696);
+}
+
+.swal-text {
+  font-size: 24px;
+}
+
+img {
+  margin-top: -12px;
+  width: 60px;
+  height: 59px;
+}
+
+.title-t {
+  display: flex;
+  /* align-items: center; */
+  /* vertical-align: middle; */
+}
